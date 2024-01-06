@@ -29,7 +29,6 @@ jobs:
         script: |
           sudo docker stop $(docker ps -q)
           sudo -i
-          sudo docker rm $(docker ps -q)
           docker pull sravanmyana/intial_repo:latest
           docker run -d --name container1 -p 80:80 sravanmyana/intial_repo:latest
 
